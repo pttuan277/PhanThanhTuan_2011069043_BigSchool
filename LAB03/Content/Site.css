@@ -25,6 +25,6 @@ textarea {
 
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-    background-color: #777;
-    border-color: #fff
+    background-color: #d41d50;
+    border-color: #fbf6f6;
 }

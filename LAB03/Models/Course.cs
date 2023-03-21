@@ -13,8 +13,10 @@ namespace LAB03.Models
 
         public ApplicationUser Lecturer { get; set; }
         [Required]
-        [StringLength(255)]
+        public string LecturerId { get; set; }
 
+        [Required]
+        [StringLength(255)]
         public string Place { get; set; }
         public DateTime DateTime { get; set; }
 
