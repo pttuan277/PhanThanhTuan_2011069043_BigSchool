@@ -7,7 +7,7 @@ using System.Web;
 
 namespace LAB03.ViewModels
 {
-    public class CourseViewModel
+    public class CoursesViewModel
     {
         [Required]
         public string Place { get; set; }
@@ -17,9 +17,10 @@ namespace LAB03.ViewModels
         public string Date { get; set; }
 
         [Required]
-        [FutureDate]
+        [ValidTime]
         public string Time { get; set; }
 
+        [Required]
         public byte Category { get; set; }
         public IEnumerable<Category> Categories { get; set; }
 
@@ -28,6 +29,8 @@ namespace LAB03.ViewModels
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
 
+        public IEnumerable<Course> UpcommingCourses { get; set; }
+        public bool ShowAction { get; set; }
 
 
 

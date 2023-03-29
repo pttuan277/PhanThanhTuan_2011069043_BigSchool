@@ -1,5 +1,4 @@
-﻿using Microsoft.Ajax.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
@@ -8,7 +7,7 @@ using System.Web;
 
 namespace LAB03.ViewModels
 {
-    public class FutureDate:ValidationAttribute
+    public class FutureDate: ValidationAttribute
     {
         public override bool IsValid(object value)
         {
@@ -16,9 +15,8 @@ namespace LAB03.ViewModels
             var isValid = DateTime.TryParseExact(Convert.ToString(value),
                 "dd/M/yyyy",
                 CultureInfo.CurrentCulture,
-                DateTimeStyles.None,
-                out dateTime
-                );
+                DateTimeStyles.None, 
+                out dateTime);
             return (isValid && dateTime > DateTime.Now);
         }
     }
